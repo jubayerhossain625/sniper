@@ -172,7 +172,7 @@ class TextFieldLTDWidget extends StatelessWidget {
           : const EdgeInsets.only(left: 6.0),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(7.0),
-          border: Border.all(width: 1.0, color:  Colors.black)),
+          border: Border.all(width: 1.0, color:  Colors.white)),
       height: 45.0,
       width: double.infinity,
       child: Row(
@@ -180,7 +180,7 @@ class TextFieldLTDWidget extends StatelessWidget {
           icon != null
               ? Icon(
             icon,
-            color: Colors.black,
+            color: Colors.white,
           )
               : SizedBox(),
           Expanded(
@@ -196,25 +196,15 @@ class TextFieldLTDWidget extends StatelessWidget {
                   contentPadding: const EdgeInsets.only(
                       left: 4.0, right: 3.0, top: 3.0, bottom: 3.0),
                   isDense: true,
-                  // enabledBorder: OutlineInputBorder(
-                  //   borderRadius: BorderRadius.circular(6.0),
-                  //   borderSide: const BorderSide(color: AppColors.amberColor),
-                  // ),
-                  // border: OutlineInputBorder(
-                  //   borderRadius: BorderRadius.circular(6.0),
-                  //   borderSide: const BorderSide(color: AppColors.amberColor),
-                  // ),
-                  // focusedBorder: OutlineInputBorder(
-                  //   borderRadius: BorderRadius.circular(6.0),
-                  //   borderSide: const BorderSide(color: AppColors.amberColor),
-                  // ),
-
                   border: InputBorder.none,
-                  hoverColor:  Colors.black ,
-                  focusColor:   Colors.black,
+                  hoverColor:  Colors.blue ,
+                  focusColor:   Colors.blue,
                   disabledBorder: InputBorder.none,
                   hintText: hint,
+                hintStyle: const TextStyle(color: Colors.white),
+
               ),
+              style: TextStyle(color: Colors.white),
             ),
           ),
         ],

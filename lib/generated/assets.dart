@@ -2,10 +2,10 @@
 class Assets {
   Assets._();
 
+  static const String assetsBg = 'assets/bg.jpeg';
   static const String lottieGetres = 'assets/lottie/getres.json';
   static const String lottieHacker = 'assets/lottie/hacker.json';
   static const String lottieLodercat = 'assets/lottie/lodercat.json';
   static const String lottieSimple = 'assets/lottie/simple.json';
-  static const String lottieSimpletest = 'assets/lottie/simpletest.json';
 
 }

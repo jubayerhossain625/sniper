@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class CustomBox extends StatelessWidget {
@@ -9,9 +11,14 @@ class CustomBox extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height,
       width:  double.infinity,
-      child: widget,
-      decoration:  const BoxDecoration(
+      child: BackdropFilter(
+        filter: ImageFilter.blur(sigmaX: 3, sigmaY: 3),
+        child: widget
+      ),
+
+      decoration:   const BoxDecoration(
         color: Colors.deepOrange,
+        image: DecorationImage(image: AssetImage('assets/bg.jpeg',),fit: BoxFit.cover,),
         gradient:LinearGradient(
             colors: [
               Colors.orange,

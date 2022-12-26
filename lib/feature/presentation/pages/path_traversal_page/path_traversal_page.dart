@@ -28,7 +28,7 @@ class _PathTraversalPageState extends State<PathTraversalPage> {
   late DataModel dataModel;
   List<DataModel> getData =[];
   List out =[];
-
+  String path='assets/lottie/simple.json';
 
 
   fetchAlbum(String url)async {
@@ -120,7 +120,7 @@ class _PathTraversalPageState extends State<PathTraversalPage> {
                           height: 40,
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(25),
-                              color: Colors.white
+                              color: Colors.white.withOpacity(0.8)
                           ),
                           child:const TextLtdWidget(title: "Path Traversal",color: Colors.black,weight: FontWeight.w600,size: 18,),
                         ),
@@ -139,51 +139,25 @@ class _PathTraversalPageState extends State<PathTraversalPage> {
                 ),
               ),
               const  SizedBox(height: 20,),
-              // Padding(
-              //   padding: const EdgeInsets.symmetric(horizontal: 30),
-              //   child: Row(
-              //     crossAxisAlignment: CrossAxisAlignment.center,
-              //     mainAxisAlignment: MainAxisAlignment.center,
-              //     children: [
-              //       Checkbox(value: isCheeked,
-              //           activeColor: Colors.green,
-              //           checkColor: Colors.white,
-              //           tristate: false,
-              //           onChanged: (newBool){
-              //         setState(() {
-              //           isCheeked = newBool;
-              //         });
-              //           }
-              //       ),
-              //       const TextLtdWidget(title: "Get Request\nonly",line: 2,weight: FontWeight.w700,),
-              //       const Expanded(child: SizedBox(width: 1,)),
-              //       Checkbox(value: isCheekedp,
-              //           activeColor: Colors.green,
-              //           checkColor: Colors.white,
-              //           tristate: false,
-              //           onChanged: (newBool){
-              //             setState(() {
-              //               isCheekedp = newBool;
-              //             });
-              //           }
-              //       ),
-              //       const TextLtdWidget(title: "Auto Switch(GET/\nPOST)",line: 2,weight: FontWeight.w700,),
-              //     ],
-              //   ),
-              // ),
 
               const SizedBox(height: 20,),
               ButtonLTDWidget(widget: const TextLtdWidget(title: "Start",
-                weight: FontWeight.w500,size: 17.0,color: Colors.white,
-              ),bgColor: Colors.deepPurple,
+                weight: FontWeight.w700,size: 18.0,color: Colors.white,
+              ),bgColor: Colors.brown,
                 onTap: ()async{
                   isloaded = false;
                   if(validator.url(data.text)){
                     _fetchData(context);
                     getData.clear();
                     fetchAlbum(data.text);
+                    setState(() {
+                      path='assets/lottie/getres.json';
+                    });
                   }
                   else{
+                    setState(() {
+                      path='assets/lottie/simple.json';
+                    });
                     ScaffoldMessenger.of(context).showSnackBar(
                       const SnackBar(content: Text('Pleaser Enter valid Url')),
                     );
@@ -201,7 +175,7 @@ class _PathTraversalPageState extends State<PathTraversalPage> {
                   width: double.infinity,
                   padding: const EdgeInsets.all(5.00),
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Colors.white.withOpacity(0.8),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Column(
@@ -213,7 +187,7 @@ class _PathTraversalPageState extends State<PathTraversalPage> {
                             itemCount: getData.length,
                             itemBuilder: (context,index){
                               return  TextLtdWidget(title: "${getData[index].statusCode}    ----   ${getData[index].path}",size: 14.00,weight: FontWeight.w600,);
-                            }): loder(),
+                            }): simpleLoader(path),
                       )
                     ],
                   ),

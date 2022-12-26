@@ -17,11 +17,12 @@ class ButtonWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      color: bgColor ?? Colors.deepPurpleAccent,
+      elevation: 0,
+      color: bgColor ?? Colors.black.withOpacity(0.7),
         child: widget ?? const TextWidget(title: 'Title'),
         height: height ?? 35.0,
         minWidth: width ?? 85.0,
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius??4.0)),
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(radius??7.0)),
         onPressed: onTap);
   }
 }

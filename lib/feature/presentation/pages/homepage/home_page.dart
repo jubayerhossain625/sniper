@@ -25,13 +25,13 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 alignment: Alignment.center,
-                height: 100,
+                height: 80,
                 width: MediaQuery.of(context).size.width,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(25),
-                  color: Colors.white
+                  color: Colors.green.withOpacity(0.5)
                 ),
-                child:const TextLtdWidget(title: "SELECT YOUR TEST",color: Colors.black,weight: FontWeight.w600,size: 34,),
+                child:const TextLtdWidget(title: "SELECT YOUR TEST",color: Colors.white,weight: FontWeight.bold,size: 26,),
               ),
             ),
             const SizedBox(height: 20,),

@@ -3,7 +3,7 @@ import 'package:lottie/lottie.dart';
 
 Widget loder(){
   return Center(
-    child: Container(height: 200,width:200,
+    child: SizedBox(height: 200,width:200,
       child:  Lottie.asset('assets/lottie/getres.json'),
     )
   );
@@ -11,7 +11,7 @@ Widget loder(){
 
 Widget simpleLoader(String path){
   return Center(
-      child: Container(height: 200,width:200,
+      child: SizedBox(height: 200,width:200,
         child:  Lottie.asset(path),
       )
   );
