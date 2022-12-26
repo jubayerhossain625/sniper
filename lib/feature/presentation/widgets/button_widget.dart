@@ -42,18 +42,20 @@ class ButtonLTDWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialButton(
-      elevation: 0.0,
+        disabledElevation: 8,
+        disabledColor: Colors.cyan,
+        elevation: 0.0,
         hoverColor: focusColor,
         highlightColor: focusColor,
         color: bgColor ?? Colors.deepPurpleAccent,
-        child: widget ?? const TextWidget(title: 'Title'),
+        child: widget ??  TextWidget(title: 'Title'),
         height: height ?? 35.0,
         minWidth: width ?? 85.0,
         shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(radius??4.0),
 
         ),
-        onPressed: onTap);
+        onPressed:onTap);
   }
 }
 
