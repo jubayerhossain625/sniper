@@ -37,7 +37,7 @@ class _SimpleTestPageState extends State<SimpleTestPage> {
       "url": url.toString(),
       "type":"s"
     };
-    var response = await http.post(Uri.parse("http://192.168.0.102:2000"),
+    var response = await http.post(Uri.parse("http://192.168.0.156:2000"),
       headers: {"Content-Type": "application/json"},
       body: jsonEncode(x),
 
