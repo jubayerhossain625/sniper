@@ -2,6 +2,7 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:sniper/feature/API/api_io.dart';
 import 'package:sniper/feature/presentation/widgets/button_widget.dart';
 import 'package:sniper/feature/presentation/widgets/custom_box.dart';
 import 'package:sniper/feature/presentation/widgets/getre.dart';
@@ -36,7 +37,7 @@ class _DirectorySearchPageState extends State<DirectorySearchPage> {
       "url": url.toString(),
       "type":"d"
     };
-    var response = await http.post(Uri.parse("http://192.168.0.102:2000"),
+    var response = await http.post(Uri.parse(API.src),
       headers: {"Content-Type": "application/json"},
       body: jsonEncode(x),
 

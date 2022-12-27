@@ -6,14 +6,14 @@ import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 
-class BruthForcePage extends StatefulWidget {
-  const BruthForcePage({super.key});
+class HashIdentifyPage extends StatefulWidget {
+  const HashIdentifyPage({super.key});
 
   @override
-  State<BruthForcePage> createState() => _BruthForcePageState();
+  State<HashIdentifyPage> createState() => _HashIdentifyPageState();
 }
 
-class _BruthForcePageState extends State<BruthForcePage> {
+class _HashIdentifyPageState extends State<HashIdentifyPage> {
   late final WebViewController _controller;
 
   @override
@@ -46,7 +46,7 @@ class _BruthForcePageState extends State<BruthForcePage> {
           );
         },
       )
-      ..loadRequest(Uri.parse(CommonData.burte_src));
+      ..loadRequest(Uri.parse(CommonData.hash_src));
 
     // #docregion platform_features
     if (controller.platform is AndroidWebViewController) {

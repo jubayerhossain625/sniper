@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sniper/feature/presentation/pages/Hash_cracker/hash_cracker.dart';
 import 'package:sniper/feature/presentation/pages/directory_search_page/directory_search_page.dart';
 import 'package:sniper/feature/presentation/pages/path_traversal_page/path_traversal_page.dart';
 import 'package:sniper/feature/presentation/pages/simple_test_page/simple_text_page.dart';
@@ -65,7 +66,7 @@ class HomePage extends StatelessWidget {
                   ),
                   const Expanded(child: SizedBox(width: 2,)),
                   ButtonWidget(height: 100,width: 150,onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) => const BruthForcePage()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  BruthForcePage()));
                   },
                     widget: const TextLtdWidget(title: " BURTE\nFOURCE",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
                   ),
@@ -77,11 +78,15 @@ class HomePage extends StatelessWidget {
               padding: const EdgeInsets.all(15),
               child: Row(
                 children: [
-                  ButtonWidget(height: 100,width: 150,onTap: (){},
+                  ButtonWidget(height: 100,width: 150,onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const HashCrackerPage()));
+                  },
                     widget: const TextLtdWidget(title: "   HASH\nINDENTIFR",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
                   ),
                   const Expanded(child: SizedBox(width: 2,)),
-                  ButtonWidget(height: 100,width: 150,onTap: (){},
+                  ButtonWidget(height: 100,width: 150,onTap: (){
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const HashCrackerPage()));
+                  },
                     widget: const TextLtdWidget(title: "   HASK \nCRACKER",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
                   ),
                 ],
