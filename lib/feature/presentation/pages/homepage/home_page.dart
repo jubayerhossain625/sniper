@@ -9,7 +9,6 @@ import 'package:sniper/feature/presentation/widgets/text_widget.dart';
 
 import '../../widgets/button_widget.dart';
 import '../Hash_Identify_page/hash_identify.dart';
-import '../burte_force_page/bruth_force_page.dart';
 
 
 class HomePage extends StatelessWidget {
