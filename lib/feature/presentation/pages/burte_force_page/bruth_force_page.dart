@@ -46,7 +46,7 @@ class _BruthForcePageState extends State<BruthForcePage> {
           );
         },
       )
-      ..loadRequest(Uri.parse(CommonData.burte_src));
+      ..loadRequest(Uri.parse(CommonData.forun));
 
     // #docregion platform_features
     if (controller.platform is AndroidWebViewController) {

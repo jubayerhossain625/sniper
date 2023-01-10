@@ -6,14 +6,14 @@ import 'package:webview_flutter_android/webview_flutter_android.dart';
 import 'package:webview_flutter_wkwebview/webview_flutter_wkwebview.dart';
 
 
-class HashIdentifyPage extends StatefulWidget {
-  const HashIdentifyPage({super.key});
+class AllLabPage extends StatefulWidget {
+  const AllLabPage({super.key});
 
   @override
-  State<HashIdentifyPage> createState() => _HashIdentifyPageState();
+  State<AllLabPage> createState() => _AllLabPageState();
 }
 
-class _HashIdentifyPageState extends State<HashIdentifyPage> {
+class _AllLabPageState extends State<AllLabPage> {
   late final WebViewController _controller;
 
   @override
@@ -46,7 +46,7 @@ class _HashIdentifyPageState extends State<HashIdentifyPage> {
           );
         },
       )
-      ..loadRequest(Uri.parse(CommonData.hash_src_id));
+      ..loadRequest(Uri.parse(CommonData.All_Lab));
 
     // #docregion platform_features
     if (controller.platform is AndroidWebViewController) {

@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sniper/feature/presentation/pages/Hash_cracker/hash_cracker.dart';
 import 'package:sniper/feature/presentation/pages/directory_search_page/directory_search_page.dart';
+import 'package:sniper/feature/presentation/pages/forum/from.dart';
 import 'package:sniper/feature/presentation/pages/path_traversal_page/path_traversal_page.dart';
 import 'package:sniper/feature/presentation/pages/simple_test_page/simple_text_page.dart';
 import 'package:sniper/feature/presentation/widgets/custom_box.dart';
 import 'package:sniper/feature/presentation/widgets/text_widget.dart';
 
 import '../../widgets/button_widget.dart';
+import '../Hash_Identify_page/hash_identify.dart';
 import '../burte_force_page/bruth_force_page.dart';
 
 
@@ -66,9 +68,9 @@ class HomePage extends StatelessWidget {
                   ),
                   const Expanded(child: SizedBox(width: 2,)),
                   ButtonWidget(height: 100,width: 150,onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  BruthForcePage()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  HashIdentifyPage()));
                   },
-                    widget: const TextLtdWidget(title: " BURTE\nFOURCE",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
+                    widget: const TextLtdWidget(title: "   HASH\nIDENTIFIER",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
                   ),
                 ],
               ),
@@ -81,13 +83,13 @@ class HomePage extends StatelessWidget {
                   ButtonWidget(height: 100,width: 150,onTap: (){
                     Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const HashCrackerPage()));
                   },
-                    widget: const TextLtdWidget(title: "   HASH\nINDENTIFR",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
+                    widget: const TextLtdWidget(title: "   HASH\nCRACKER",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
                   ),
                   const Expanded(child: SizedBox(width: 2,)),
                   ButtonWidget(height: 100,width: 150,onTap: (){
-                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const HashCrackerPage()));
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context) =>  const Forum()));
                   },
-                    widget: const TextLtdWidget(title: "   HASK \nCRACKER",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
+                    widget: const TextLtdWidget(title: "  FORUM",color: Colors.white,weight: FontWeight.w700,line: 2,size: 18,),
                   ),
                 ],
               ),
@@ -106,7 +108,7 @@ class HomePage extends StatelessWidget {
               alignment: Alignment.center,
               height: 50,
               width: MediaQuery.of(context).size.width,
-              child: const TextLtdWidget(title: "Project your network with us",color: Colors.white,weight: FontWeight.w600,size: 18,),
+              child: const TextLtdWidget(title: "Test your URL with us",color: Colors.white,weight: FontWeight.w600,size: 18,),
             )
           ],
         ),

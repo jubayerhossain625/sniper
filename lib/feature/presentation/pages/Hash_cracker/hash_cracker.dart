@@ -46,7 +46,7 @@ class _HashCrackerPageState extends State<HashCrackerPage> {
           );
         },
       )
-      ..loadRequest(Uri.parse(CommonData.hash_crack_src));
+      ..loadRequest(Uri.parse(CommonData.hash_crack));
 
     // #docregion platform_features
     if (controller.platform is AndroidWebViewController) {
