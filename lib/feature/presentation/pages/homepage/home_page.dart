@@ -95,9 +95,9 @@ class HomePage extends StatelessWidget {
             ),
            const Expanded(child: SizedBox(height: 10,)),
             Container(
-              decoration: const BoxDecoration(
-                color: Colors.green,
-                borderRadius: BorderRadius.only(
+              decoration:  BoxDecoration(
+                color: Colors.deepPurple.withOpacity(0.5),
+                borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(0),
                   bottomLeft: Radius.circular(200.00),
                   topRight: Radius.circular(200),
