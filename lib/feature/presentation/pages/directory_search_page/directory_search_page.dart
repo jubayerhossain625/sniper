@@ -28,7 +28,7 @@ class _DirectorySearchPageState extends State<DirectorySearchPage> {
   bool? isloaded = false;
   late DataModel dataModel;
   List<DataModel> getData =[];
-  List out =[];
+  List<DataModel> out =[];
   String path='assets/lottie/simple.json';
 
 
@@ -51,6 +51,8 @@ class _DirectorySearchPageState extends State<DirectorySearchPage> {
     }
     isloaded = true;
   }
+
+
 
 
 

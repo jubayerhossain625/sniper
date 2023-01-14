@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'feature/presentation/pages/splace_page/splace.dart';
+import 'package:showcaseview/showcaseview.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,10 +15,16 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
      debugShowCheckedModeBanner: false,
       theme: ThemeData(
-
         primarySwatch: Colors.blue,
       ),
-home: const SlpacePage(),
+       home:Scaffold(
+         body: ShowCaseWidget(
+            builder: Builder(
+              builder : (context) => const SlpacePage(),
+            )
+         ),
+       ),
+
     );
   }
 }

@@ -41,6 +41,7 @@ dependencies:
   http: ^0.13.5
   regexed_validator: ^2.0.0+1
   webview_flutter: ^4.0.1
+  showcaseview: ^2.0.0+1
 
 dev_dependencies:
   flutter_test:
